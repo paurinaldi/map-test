@@ -20,12 +20,8 @@ const pins = [
 
 const WorldMap = ({ onCountryClick }) => {
   return (
-    <div className="w-full">
-      <ComposableMap
-        style={{ width: "100%" }}
-        className="h-1/2 w-full"
-        projectionConfig={{ scale: 230 }}
-      >
+    <div className="w-full bg-red-100">
+      <ComposableMap projectionConfig={{ scale: 100 }} height={260}>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
             geographies.map((geo) => (
